@@ -1,29 +1,5 @@
 <?php
-/*
-function get_db($url_page, $adr, $opis, $tel){
-    require ('connect_db.php');
-    $sql = "INSERT INTO AVITO
-    (url, adr, opis, tel, post_date)
-    values 
-    ('$url_page', '$adr', '$opis', '$tel', NOW())";
 
-    mysqli_query($dbc, $sql);
-}
-
-function apruv($url)
-{
-    require('connect_db.php');
-    $sql = 'SELECT * FROM forum';
-    $result = mysqli_query($dbc, $sql);
-    if (mysqli_num_rows($result) > 0) {
-        while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-            $url_in_db = $row['url'];
-            if ($url != $url_in_db)
-            {}
-        }
-    }
-}
-*/
 class GetDB
 {
     private $a;
@@ -131,19 +107,7 @@ for($i=1;$i < ($last_page+1); $i++)
         $doc_p = new DOMDocument();
         $doc_p->formatOutput = false;
         @$doc_p->loadHTML($html_page);
-        /*
-        $domxpath_p = new DOMXPath($doc_p);
-        $tagName_p = 'a';
-        $attrName_p ='class';
-        $attrValue_p ='BPWk2';
-        $filtered_p = $domxpath_p->query("//$tagName" . '[@' . $attrName . "='$attrValue']");
-        foreach ($filtered_p as $key_p=>$value_p)
-        {
-            echo 'Номер'."\n";
-            $number=$value_p->getAttribute('href');
-            echo $number."\n";
-        }
-        */
+        
         //Get telephone number (from mobile version avito.ru)
         $ahreftags = $doc_p->getElementsByTagName('a');
 
