@@ -1,0 +1,85 @@
+body {
+    background: white;
+    font-size: 80%;
+    padding: 20px;
+}
+
+main {
+    position: relative;
+    background: green;
+    height: 300px;
+    width: 64%;
+    margin: 0 auto;
+    padding: 20px;
+    resize: both;
+    /*background: url('im.jpg');*/
+    background-blend-mode: darken;
+    background: url('im.jpg') no-repeat center;
+    background-color: rgba(0,0,0,.7);
+    background-blend-mode: darken;
+    color: white;
+    background-position: center center;
+}
+
+ main div {
+    /*z-index:0;*/
+    color: white;
+    width: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 20px;
+    resize: both;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    text-align: center;
+    border: 1px solid white;
+    /*bottom: 0;*/
+}
+
+table {
+
+    border-spacing: 0 ;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    margin: auto;
+    margin-top: 10px;
+
+}
+th {
+    padding: 10px 20px;
+    background: #56433D;
+    color: #F9C941;
+    border-right: 2px solid;
+    font-size: 0.9em;
+}
+th:first-child {
+    text-align: left;
+}
+th:last-child {
+    border-right: none;
+}
+td {
+    vertical-align: middle;
+    padding: 10px;
+    font-size: 14px;
+    text-align: center;
+    border-top: 2px solid #56433D;
+    border-bottom: 2px solid #56433D;
+    border-right: 2px solid #56433D;
+}
+td:first-child {
+    border-left: 2px solid #56433D;
+    border-right: none;
+}
+td:nth-child(2){
+    text-align: left;
+}
+a{
+    color: black;
+}
+a:hover{
+    color: grey;
+}
