@@ -107,7 +107,19 @@ for($i=1;$i < ($last_page+1); $i++)
         $doc_p = new DOMDocument();
         $doc_p->formatOutput = false;
         @$doc_p->loadHTML($html_page);
-        
+        /*
+        $domxpath_p = new DOMXPath($doc_p);
+        $tagName_p = 'a';
+        $attrName_p ='class';
+        $attrValue_p ='BPWk2';
+        $filtered_p = $domxpath_p->query("//$tagName" . '[@' . $attrName . "='$attrValue']");
+        foreach ($filtered_p as $key_p=>$value_p)
+        {
+            echo 'Номер'."\n";
+            $number=$value_p->getAttribute('href');
+            echo $number."\n";
+        }
+        */
         //Get telephone number (from mobile version avito.ru)
         $ahreftags = $doc_p->getElementsByTagName('a');
 
@@ -158,4 +170,3 @@ for($i=1;$i < ($last_page+1); $i++)
         unset($k);
     }
 }
-
